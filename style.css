@@ -1,0 +1,261 @@
+:root {
+--colorblue: #1877f2;
+--colorgreen: #42b72a;
+--colormain: #f2f4f7 ;
+--colorwhite: #ffffff;
+--colortext: #1c1e21;
+--colorline: #dddfe2 ;
+--colorlink: #8a8d91;
+--colorborder: #d7dade;
+--colorplaceholder:#e7e9ec;
+--colorcopy: #9a9da4;
+}
+html {
+box-sizing: border-box;
+font-size: 62.5%;
+}
+*, *:before, *:after {
+box-sizing: inherit;
+}
+body{
+font-size: 16px;
+font-family: Arial, Helvetica, Arial, sans-serif;
+}
+h1,h2{
+margin: 0;
+}
+a{
+text-decoration: none;
+}
+ul{
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+/*clases generales*/
+.padding-main{
+padding: 72px 0 112px 0 ;
+}
+.bg {
+background-color: var(--colormain);
+}
+.bold{
+font-weight:bold ;
+color: var(--colortext);
+}
+.bold:hover{
+text-decoration: underline;
+}
+.contenedor {
+width: 980px;
+margin: 0 auto;
+}
+.pd-20 {
+padding: 20px 0;
+}
+.dos-columnas{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+column-gap: 3.2rem;
+}
+.contenedor-logo{
+width: 548px;
+height: 182.05px;
+padding: 112px 0 16px 0;
+}
+.logo{
+width: 301.067px;
+height: 106px;
+margin: -28px;
+}
+.eslogan{
+width: 50rem;
+padding-bottom: 20px;
+font-size: 28px ;
+font-weight: normal;
+line-height: 3.3rem ;
+color: var(--colortext);
+}
+/* diseño de form*/
+.shadow{
+box-shadow: 0px 5px 7px #666666 ;
+}
+.card{
+width: 396px ;
+height: 349.817px;
+background-color: var(--colorwhite);
+border-radius: 8px;
+text-align: center;
+padding:10px 0 24px 0;
+margin-top: 40px;
+}
+.card input[type="email"],
+.card input[type="password"] {
+display: inline-block;
+width: 364px ;
+height: 52px;
+padding: 14px 16px ;
+margin: 6px 0 6px 0;
+border-radius: 6px;
+outline: none;
+border:1px solid var(--colorborder);
+}
+.card input[type="email"]::placeholder,
+.card input[type="password"]::placeholder {
+color: var(--colorlink);
+font-size: 1.5rem;
+}
+.card input[type="email"]:focus,
+.card input[type="password"]:focus {
+border: 1px solid var(--colorblue);
+box-shadow: 0px 0px 1px var(--colorblue);
+}
+.card input[type="submit"]:focus{
+border: 1px solid var(--colorblue);
+box-shadow: 0px 0px 3px var(--colorblue);
+}
+.btn-blue{
+width: 364px;
+height: 48px;
+border-radius: 6px;
+border: none;
+margin: 1rem 0 1.6rem 0 ;
+padding: 0px 16px;
+background-color: var(--colorblue);
+font-size: 2rem;
+color: var(--colorwhite);
+font-weight: bold;
+cursor: pointer;
+}
+.btn-blue:hover {
+background-color: #1c73e4 ;
+}
+.link{
+color: var(--colorblue);
+font-size: 14px;
+}
+.link:hover {
+text-decoration: underline;
+}
+.line{
+height: 1px;
+border-top: 1px solid var(--colorline);
+margin: 20px 1.6rem 2.6rem 1.6rem;
+}
+.btn-green{
+display: inline-block;
+width: 189.75px;
+height: 48px;
+padding: 15px 15px;
+border-radius: 6px;
+font-size: 1.5rem;
+background-color: var(--colorgreen);
+color: var(--colorwhite);
+cursor: pointer;
+font-weight: bold;
+}
+.btn-green:hover{
+background-color: #3ca826;
+}
+.centrado{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100px;
+}
+.info{
+grid-column: 2/3;
+font-size: 14px;
+text-align: center;
+color: var(--colortext) ;
+margin: 2.8rem 0 0 0;
+line-height: 2rem;
+}
+.bloque{
+display: block;
+}
+/*footer*/
+.links{
+padding-top: 8px ;
+cursor: pointer;
+}
+.links a{
+color: var(--colorlink);
+font-size: 1.2rem;
+cursor: pointer;
+}
+.link a:hover{
+text-decoration: underline;
+color: var(--colorlink);
+}
+.links li{
+display: inline-block;
+padding-right: 1.5rem;
+}
+.links li:hover{
+text-decoration: underline;
+color: var(--colorlink);
+}
+.links-fo{
+height: 1px;
+border-top: 1px solid var(--colorline);
+}
+.links-fo:hover{
+text-decoration: underline;
+color: var(--colorlink);
+}
+.copy{
+margin: 2.5rem 0 ;
+font-size: 11px;
+color: var(--colorcopy);
+}
+
+/*  media query para que se adapte tambien a celulares*/
+
+@media (max-width: 768px) {
+  .contenedor {
+    width: 90%;
+    padding: 20px 0;
+  }
+
+  .dos-columnas {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    text-align: center;
+  }
+
+  .contenedor-logo {
+    width: 100%;
+    padding: 40px 0 0 0;
+  }
+
+  .eslogan {
+    width: 100%;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    padding: 0 10px 20px 10px;
+  }
+
+  .card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .card input[type="email"],
+  .card input[type="password"],
+  .btn-blue {
+    width: 90%;
+  }
+
+  .btn-green {
+    width: 60%;
+  }
+
+  .info {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+  }
+}
+
+
+
